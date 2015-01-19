@@ -25,10 +25,23 @@ body {
 .spotRow {
 /*  font-family: "lucida console";*/
   font-size: 13px;
+  vertical-align:middle;
 }
 
 .spotRow .dx {
   color: navy;
+}
+
+.spots {
+  background-clip: padding-box; /* this has been added */
+  border-radius: 5px;
+  background-color: #52A3CC;
+  color: white;
+  border: 5px solid white;
+}
+
+.insertSpots {
+  border-right: 2px solid black;
 }
 
 mark {

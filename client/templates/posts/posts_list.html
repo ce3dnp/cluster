@@ -1,7 +1,7 @@
 <template name="postsList">
 <div class="row">
 	<!-- insert spots -->
-	<div class="col-md-4">
+	<div class="col-md-3 insertSpots">
 	{{#if currentUser}}
 		<form class="form-horizontal" id="spotForm">
 	  	  <h4> Enter your DX-Spot</h4>
@@ -46,10 +46,10 @@
 
  	
  	<!-- display spots -->
- 	<div class="col-md-8">
+ 	<div class="col-md-9">
 		<div class="posts">
-			<table class="table table-hover ">
-				<thead>
+			<table class="table table-hover">
+				<thead class="spots">
 					<tr>
 						<th>DX</th>
 						<th>CC</th>
