@@ -1,0 +1,34 @@
+<template name="dxSpotForm">
+
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h4>Enter your DX Spot...</h4>
+      </div>
+      <div class="panel-body">
+        <form class="form-horizontal dxspotform" role="form">
+      
+        <div class="form-group">
+        <input type="text" class="form-control" id="dxCallSign" placeholder="DX Callsign" autofocus required>
+      </div>
+      <div class="form-group">
+          <input type="text" id="freq" name="freq" class="form-control" placeholder="Frequency MHz" pattern="\d+\{2}.\d+\{3}.\d+{2}" required>
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="mode">
+          <option>CW</option>
+          <option>SSB</option>
+          <option>FM</option>
+          <option>PSK</option>
+          <option>RTTY</option>
+        </select>
+      </div>
+      <div class="form-group">
+          <input type="text" class="form-control" id="comments" placeholder="Your comments">
+      </div>
+      <div class="form-group">
+           <button type="submit" class="btn btn-info">Post</button>
+      </div>
+    </form>
+      </div>
+    </div>
+</template>

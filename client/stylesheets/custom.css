@@ -72,7 +72,7 @@ hr {
 
 .navbar-blue {
     border-width:0;
-	background-color:#3B5999;
+    background-color:#3B5999;
     color:#ffffff;
     font-family:arial,sans-serif;
     top:0;
@@ -283,4 +283,16 @@ small.text-muted {
   #sidebar, #sidebar a, #sidebar-footer a {
     padding-left:3px;
   }
+}
+
+/*
+  dx spot form
+  -----------
+*/
+.dxspotform {
+  padding: 10px;
+}
+
+.dxspotpanel {
+  background: #FFFFCC;
 }
