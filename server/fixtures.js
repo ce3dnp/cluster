@@ -33,3 +33,15 @@ if (Spots.find().count() === 0) {
     comments: 'Great one for the log tks'
   });
 }
+
+if (Prefixes.find().count() === 0 ) {
+  Prefixes.insert (
+  {
+    prefix: "G",
+    entity: "England",
+    continent: "Europe",
+    continent_short: "EU",
+    itu: "27",
+    cq: "14"
+  });
+}
