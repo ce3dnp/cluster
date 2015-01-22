@@ -1,13 +1,14 @@
 <template name="dxSpot">
+{{#Animate}}
 	<!-- dx spots  -->
-	<div class="panel panel-default">
+	<div class="panel panel-default spot animate">
 	  <div class="panel-heading">
 	    <h5 class="pull-right">{{spotter}}</h5>
 	    <h4><mark><b>{{dx}}</b></mark></h4>
 	  </div>
 	  <div class="panel-body">
 	    <p>
-	      <img src="//placehold.it/150x150" class="img-circle pull-right"> <h4><b>{{freq}}</b></h4>
+	      <img src="uk.png" class="img-circle pull-right"> <h4><b>{{freq}}</b></h4>
 	    </p>
 	    <p>{{mode}}</p>
 	    <p>{{timestamp}}</p>
@@ -16,5 +17,5 @@
 	      {{comments}}
 	  </div>
 	</div>
-
+{{/Animate}}
 </template>

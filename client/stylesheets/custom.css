@@ -296,3 +296,14 @@ small.text-muted {
 .dxspotpanel {
   background: #FFFFCC;
 }
+
+/*
+  animation
+*/
+.spot {
+    opacity: 1; 
+    transition: opacity 1500ms;
+}
+.spot.animate {
+    opacity: 0;
+}
