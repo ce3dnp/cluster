@@ -1,19 +1,31 @@
-<template name="dxSpot">
+<template name="spotItem">
 {{#Animate}}
 	<!-- dx spots  -->
 	<div class="panel panel-default spot animate">
 	  <div class="panel-heading">
 	    <h5 class="pull-right">{{spotter}}</h5>
 	    <h4><mark><b>{{dx}}</b></mark></h4>
+	    	<small>
+	    		Entity: {{entity}}
+	    		Continent: {{continent}}
+	    		ITU: {{ituZone}}
+	    		CQ: {{cqZone}}
+	    		Entity Code: {{entityCode}}
+	    	</small>
 	  </div>
 	  <div class="panel-body">
+<<<<<<< HEAD:client/templates/posts/post_item.html
 	  	<img src="england.png" class="img-circle pull-right"> 
 	    <p><h4><b>{{freq}}</b></h4></p>
+=======
+	  	<img src="uk.png" class="img-circle pull-right"> 
+	    <p><h4><b>{{freq}} MHz</b></h4></p>
+>>>>>>> 246e05315fd0981d0d72e95d75036f537ac089b8:client/templates/posts/spot_item.html
 	    <p>{{mode}}</p>
 	    <p>{{timestamp}}</p>
 	    <!-- <div class="clearfix"></div> -->
 	    <hr>
-	      {{comments}}
+	    {{comments}}
 	  </div>
 	</div>
 {{/Animate}}

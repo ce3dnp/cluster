@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Template.header.helpers({
+=======
+Template.mainBody.helpers({
+>>>>>>> 246e05315fd0981d0d72e95d75036f537ac089b8
   spots: function () {
     return Spots.find( {}, {sort: {timestamp: -1 }});
   },
@@ -7,21 +11,43 @@ Template.header.helpers({
   }
 });
 
-Template.header.events({
+Template.mainLeftCol.events({
   'submit form': function(e) {
     e.preventDefault()
 
+    var callsign = $(e.target).find('[id=dxCallSign]').val().toUpperCase();
+    var prefix = callsign.slice(0,1);
+
+    // check the arrlPrefixes db to see if the prefix exists, if so add the metadata
+    var dxccEntry = arrlPrefixes.findOne({pref: prefix});
+    if (dxccEntry) {
+        var entity = dxccEntry.entity.toUpperCase();    
+        var continent = dxccEntry.continent.toUpperCase();
+        var ituZone = dxccEntry.ituZone;
+        var cqZone = dxccEntry.cqZone;
+        var entityCode = dxccEntry.entityCode; 
+    }
+
+    // insert the spot into the spots db
     var spot = {
-      dx:   $(e.target).find('[id=dxCallSign]').val().toUpperCase(),
-      cc:   'England',
+      dx:   callsign,
       freq: $(e.target).find('[id=freq]').val(),
       mode: $(e.target).find('[id=mode]').val(),
       timestamp: moment().format('DD-MM-YY HH:mm:ss ZZ'),
       spotter: Meteor.users.findOne().username.toUpperCase(),
-      comments: $(e.target).find('[id=comments]').val()
+      comments: $(e.target).find('[id=comments]').val(),
+      prefix: prefix,
+      entity: entity,
+      continent: continent,
+      ituZone: ituZone,
+      cqZone: cqZone,
+      entityCode: entityCode
     };
 
     spot._id = Spots.insert(spot);
   }
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 246e05315fd0981d0d72e95d75036f537ac089b8
