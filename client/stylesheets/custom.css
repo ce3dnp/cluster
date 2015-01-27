@@ -307,3 +307,8 @@ small.text-muted {
 .spot.animate {
     opacity: 0;
 }
+
+mark {
+    background-color: yellow;
+    color: black;
+}

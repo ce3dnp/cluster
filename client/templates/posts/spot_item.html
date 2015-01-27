@@ -3,16 +3,16 @@
 	<!-- dx spots  -->
 	<div class="panel panel-default spot animate">
 	  <div class="panel-heading">
-	    <h5 class="pull-right">{{spotter}}</h5>
-	    <h4><mark><b>{{dx}}</b></mark></h4>
-	    {{entity}}
-	    	<small>
-	    		Entity: {{entity}}
-	    		Continent: {{continent}}
-	    		ITU: {{ituZone}}
-	    		CQ: {{cqZone}}
-	    		Entity Code: {{entityCode}}
-	    	</small>
+	    <!-- <img src="uk.png" class="img-circle"> -->
+	    <h4 class=""><mark><b>{{dx}}</b></mark><small> - {{entity}} (Entity Code {{entityCode}})</small></h4>
+	    	
+	    	<!-- <small> -->
+	    		<!-- Entity: {{entity}} -->
+	    		<!-- Continent: {{continent}} -->
+	    		<!-- ITU: {{ituZone}} -->
+	    		<!-- CQ: {{cqZone}} -->
+	    		<!-- Entity Code: {{entityCode}} -->
+	    	<!-- </small> -->
 	  </div>
 	  <div class="panel-body">
 	  	<img src="uk.png" class="img-circle pull-right"> 
@@ -22,6 +22,9 @@
 	    <!-- <div class="clearfix"></div> -->
 	    <hr>
 	    {{comments}}
+	  </div>
+	  <div class="panel-footer text-right">
+	  	<small>Spotted by {{spotter}}</small>
 	  </div>
 	</div>
 {{/Animate}}
