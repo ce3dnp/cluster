@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-Template.header.helpers({
-=======
 Template.mainBody.helpers({
->>>>>>> 246e05315fd0981d0d72e95d75036f537ac089b8
   spots: function () {
     return Spots.find( {}, {sort: {timestamp: -1 }});
   },
@@ -47,7 +43,4 @@ Template.mainLeftCol.events({
     spot._id = Spots.insert(spot);
   }
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> 246e05315fd0981d0d72e95d75036f537ac089b8

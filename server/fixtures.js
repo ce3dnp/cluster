@@ -31,17 +31,6 @@ if (Spots.find().count() === 0) {
   });
 }
 
-<<<<<<< HEAD
-if (Prefixes.find().count() === 0 ) {
-  Prefixes.insert (
-  {
-    prefix: "G",
-    entity: "England",
-    continent: "Europe",
-    continent_short: "EU",
-    itu: "27",
-    cq: "14"
-=======
 // if the db has no entries then just fill with some test data
 if (arrlPrefixes.find().count() === 0) {
   arrlPrefixes.insert(
@@ -72,6 +61,5 @@ if (arrlPrefixes.find().count() === 0) {
     ituZone: '27',
     cqZone: '14',
     entityCode: '223'
->>>>>>> 246e05315fd0981d0d72e95d75036f537ac089b8
   });
 }
