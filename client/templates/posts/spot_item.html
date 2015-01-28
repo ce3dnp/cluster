@@ -6,25 +6,26 @@
 	    <h4>
 	    	<span class="text-left">
 	    		<mark><b>{{dx}}</b></mark>
-	    		<small> - {{entity}} (Continent {{continent}})</small>
 	    	</span>
-	    	<!-- <span class="pull-right"><small>spotted by {{spotter}}</small></span> -->
 	    </h4>
-
 	  </div>
 	  <div class="panel-body">
+	  {{#if continent}}
+  		<ul class="list-inline">
+	    	<li><small>{{entity}} ({{continent}})</small></li>
+  			<li><small>ITU Zone {{ituZone}}</small></li>
+  			<li><small>CQ Zone {{cqZone}}</small></li>
+  			<li><small>Entity Code {{entityCode}}</small></li>
+		</ul>
+	  {{/if}}
 	  	<img src="uk.png" class="img-flag pull-right"> 
 	    <p><h4><b>{{freq}} MHz</b></h4></p>
 	    <p>{{mode}}</p>
 	    <p>{{timestamp}}</p>
-	    <p>{{comments}}</p>
-	    <p><small>ITU Zone {{ituZone}} : CQ Zone {{cqZone}} : Entity Code {{entityCode}}</small></p>
-	    <p class="text-right"><small><u>Spotted by {{spotter}}</u></small></p>
+	    <p><b>Notes - </b> {{comments}}</p>
+	    <hr>
+	    <p class="text-right"><small>Spotted by {{spotter}}</small></p>
 	  </div>
-	  <!-- <div class="panel-footer">
-	  	<p><span class="pull-left">{{comments}}</span><span class="pull-right"><small>Spotted by {{spotter}}</small></span></p>
-		<p><small>Spotted by {{spotter}}</small></p>
-	  </div> -->
 	</div>
 {{/Animate}}
 </template>

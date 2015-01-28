@@ -41,6 +41,7 @@ Template.mainLeftCol.events({
     };
 
     spot._id = Spots.insert(spot);
+    $('.dxSpotForm').trigger("reset");
+    $('#dxCallSign').focus();
   }
 });
-

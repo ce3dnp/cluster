@@ -289,11 +289,11 @@ small.text-muted {
   dx spot form
   -----------
 */
-.dxspotform {
+.dxSpotForm {
   padding: 10px;
 }
 
-.dxspotpanel {
+.dxSpotPanel {
   background: #FFFFCC;
 }
 
@@ -318,3 +318,12 @@ mark {
   height: 70px;
   width: 70px;
 }
+
+/*.left-col-outer {
+    position: relative;
+}
+@media (min-width: 768px) {
+    .left-col {
+        position: fixed;
+    }
+}*/
