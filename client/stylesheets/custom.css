@@ -303,6 +303,7 @@ small.text-muted {
 .spot {
     opacity: 1; 
     transition: opacity 1500ms;
+    /*font-size: 10px;*/
 }
 .spot.animate {
     opacity: 0;
@@ -311,4 +312,9 @@ small.text-muted {
 mark {
     background-color: yellow;
     color: black;
+}
+
+.img-flag {
+  height: 70px;
+  width: 70px;
 }

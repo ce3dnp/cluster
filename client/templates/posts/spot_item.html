@@ -3,29 +3,28 @@
 	<!-- dx spots  -->
 	<div class="panel panel-default spot animate">
 	  <div class="panel-heading">
-	    <!-- <img src="uk.png" class="img-circle"> -->
-	    <h4 class=""><mark><b>{{dx}}</b></mark><small> - {{entity}} (Entity Code {{entityCode}})</small></h4>
-	    	
-	    	<!-- <small> -->
-	    		<!-- Entity: {{entity}} -->
-	    		<!-- Continent: {{continent}} -->
-	    		<!-- ITU: {{ituZone}} -->
-	    		<!-- CQ: {{cqZone}} -->
-	    		<!-- Entity Code: {{entityCode}} -->
-	    	<!-- </small> -->
+	    <h4>
+	    	<span class="text-left">
+	    		<mark><b>{{dx}}</b></mark>
+	    		<small> - {{entity}} (Continent {{continent}})</small>
+	    	</span>
+	    	<!-- <span class="pull-right"><small>spotted by {{spotter}}</small></span> -->
+	    </h4>
+
 	  </div>
 	  <div class="panel-body">
-	  	<img src="uk.png" class="img-circle pull-right"> 
+	  	<img src="uk.png" class="img-flag pull-right"> 
 	    <p><h4><b>{{freq}} MHz</b></h4></p>
 	    <p>{{mode}}</p>
 	    <p>{{timestamp}}</p>
-	    <!-- <div class="clearfix"></div> -->
-	    <hr>
-	    {{comments}}
+	    <p>{{comments}}</p>
+	    <p><small>ITU Zone {{ituZone}} : CQ Zone {{cqZone}} : Entity Code {{entityCode}}</small></p>
+	    <p class="text-right"><small><u>Spotted by {{spotter}}</u></small></p>
 	  </div>
-	  <div class="panel-footer text-right">
-	  	<small>Spotted by {{spotter}}</small>
-	  </div>
+	  <!-- <div class="panel-footer">
+	  	<p><span class="pull-left">{{comments}}</span><span class="pull-right"><small>Spotted by {{spotter}}</small></span></p>
+		<p><small>Spotted by {{spotter}}</small></p>
+	  </div> -->
 	</div>
 {{/Animate}}
 </template>
