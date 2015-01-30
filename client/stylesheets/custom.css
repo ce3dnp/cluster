@@ -319,11 +319,12 @@ mark {
   width: 70px;
 }
 
-/*.left-col-outer {
-    position: relative;
+.img-profile {
+  height: 140px;
+  width: 140px;
 }
-@media (min-width: 768px) {
-    .left-col {
-        position: fixed;
-    }
-}*/
+
+.map-container {
+  height: 300px;
+  width: 350px;
+}

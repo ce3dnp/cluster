@@ -3,3 +3,9 @@ Accounts.ui.config({
 });
 
 Meteor.subscribe('arrlPrefixes');
+
+if (Meteor.isClient) {
+  Meteor.startup(function() {
+    GoogleMaps.load();
+  });
+}

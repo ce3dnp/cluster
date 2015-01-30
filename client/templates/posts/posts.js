@@ -45,3 +45,4 @@ Template.mainLeftCol.events({
     $('#dxCallSign').focus();
   }
 });
+
