@@ -25,11 +25,13 @@ Template.mainLeftCol.events({
     }
 
     // insert the spot into the spots db
+    
     var spot = {
       dx:   callsign,
       freq: $(e.target).find('[id=freq]').val(),
       mode: $(e.target).find('[id=mode]').val(),
-      timestamp: moment().format('DD-MM-YY HH:mm:ss ZZ'),
+      // timestamp: moment().format('DD-MM-YY HH:mm:ss ZZ'),
+      timestamp: moment.utc().valueOf(),
       spotter: Meteor.users.findOne().username.toUpperCase(),
       comments: $(e.target).find('[id=comments]').val(),
       prefix: prefix,
@@ -40,6 +42,7 @@ Template.mainLeftCol.events({
       entityCode: entityCode
     };
 
+    console.log(spot);
     spot._id = Spots.insert(spot);
     $('.dxSpotForm').trigger("reset");
     $('#dxCallSign').focus();
