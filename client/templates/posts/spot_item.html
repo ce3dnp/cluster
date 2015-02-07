@@ -3,28 +3,38 @@
 	<!-- dx spots  -->
 	<div class="panel panel-default spot animate">
 	  <div class="panel-heading">
-	    <h4>
-	    	<span class="text-left">
-	    		<mark><b>{{dx}}</b></mark>
-	    	</span>
-	    </h4>
+	  	<div class="row">
+	  		<div class="col-md-10">
+			    <h4>
+			    	<span class="text-left">
+			    		<mark><b>{{dx}}</b></mark>
+			    	</span>
+			    	<small>{{entity}} ({{continent}})</small>
+			    </h4>
+			    {{#if continent}}
+			  		<ul class="list-inline">
+				    	<!-- <li><small>&nbsp;{{entity}} ({{continent}})</small></li> -->
+			  			<li><small>&nbsp;ITU Zone {{ituZone}}</small></li>
+			  			<li><small>CQ Zone {{cqZone}}</small></li>
+			  			<li><small>Entity Code {{entityCode}}</small></li>
+					</ul>
+			  	{{/if}}
+			  </div>
+			  <div class="col-md-2">
+			  	<img src="uk.png" class="img-flag pull-right"> 
+			  </div>
+	    </div> 
 	  </div>
 	  <div class="panel-body">
-	  {{#if continent}}
-  		<ul class="list-inline">
-	    	<li><small>{{entity}} ({{continent}})</small></li>
-  			<li><small>ITU Zone {{ituZone}}</small></li>
-  			<li><small>CQ Zone {{cqZone}}</small></li>
-  			<li><small>Entity Code {{entityCode}}</small></li>
-		</ul>
-	  {{/if}}
-	  	<img src="uk.png" class="img-flag pull-right"> 
-	    <p><h4><b>{{freq}} MHz</b></h4></p>
-	    <p>{{mode}}</p>
-	    <p>{{timestamp}}</p>
-	    <p><b>Notes - </b> {{comments}}</p>
-	    <hr>
-	    <p class="text-right"><small>Spotted by {{spotter}}</small></p>
+	  	<div class="row">
+		  	<div class="col-md-12">
+			    <p><h4><b>{{freq}} MHz</b></h4></p>
+			    <p>{{mode}}</p>
+			    <p>{{timestamp}}</p>
+			    <p><b>Notes - </b> {{comments}}</p>
+			    <p class="text-right"><small>Spotted by {{spotter}}</small></p>
+			</div>
+		</div>   
 	  </div>
 	</div>
 {{/Animate}}

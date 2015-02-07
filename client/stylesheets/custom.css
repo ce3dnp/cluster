@@ -317,6 +317,7 @@ mark {
 .img-flag {
   height: 70px;
   width: 70px;
+  /*padding: 8px;*/
 }
 
 .img-profile {
@@ -326,5 +327,16 @@ mark {
 
 .map-container {
   height: 300px;
-  width: 350px;
+  /*width: 350px;*/
+}
+
+.panel-spot {
+  border-bottom: 1px solid #e1e2e3;
+  border-top: 1px solid #e1e2e3;
+  border-right: 1px solid #e1e2e3;
+  border-left: 1px solid #e1e2e3;
+  /*height: 30px;*/
+  /*margin: 10px -12px 0 -12px;*/
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
