@@ -9,7 +9,9 @@
 			    	<span class="text-left">
 			    		<mark><b>{{dx}}</b></mark>
 			    	</span>
-			    	<small>{{entity}} ({{continent}})</small>
+			    	{{#if continent}}
+			    		<small>{{entity}} ({{continent}})</small>
+			    	{{/if}}
 			    </h4>
 			    {{#if continent}}
 			  		<ul class="list-inline">
@@ -18,6 +20,8 @@
 			  			<li><small>CQ Zone {{cqZone}}</small></li>
 			  			<li><small>Entity Code {{entityCode}}</small></li>
 					</ul>
+				{{else}}
+					<small>No DXCC information found for this callsign</small>
 			  	{{/if}}
 			  </div>
 			  <div class="col-md-2">

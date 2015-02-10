@@ -5,21 +5,10 @@
       <img src="m0atz.png" alt="..." class="img-rounded img-profile">
       <p><b>{{loggedInUser}}</b></p>
     </div>
-    <ul class="nav">
-      <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-    </ul>
-     
-    <ul class="nav hidden-xs" id="lg-menu">
-      <li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> Featured</a></li>
-      <li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Stories</a></li>
-      <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Saved</a></li>
-      <li><a href="#"><i class="glyphicon glyphicon-refresh"></i> Refresh</a></li>
-    </ul>
-    <ul class="list-unstyled hidden-xs" id="sidebar-footer">
-      <li>
-        <a href="#"><h3>Cluster</h3> <i class="fa fa-globe"></i> M0ATZ</a>
-      </li>
-    </ul>
+
+    <div class="spotForm">
+      {{> dxSpotForm}}
+    </div>
     
     <!-- tiny only nav-->
     <ul class="nav visible-xs" id="xs-menu">
