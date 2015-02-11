@@ -32,11 +32,20 @@
 	  <div class="panel-body">
 	  	<div class="row">
 		  	<div class="col-md-12">
-			    <p><h4><b>{{freq}} MHz</b></h4></p>
-			    <p>{{mode}}</p>
-			    <p>{{timestamp}}</p>
-			    <p><b>Notes - </b> {{comments}}</p>
-			    <p class="text-right"><small>Spotted by {{spotter}}</small></p>
+
+		  		<ul class="list-unstyled">
+		  	  		<ul class="list-inline">
+			  			<li><h4><b>{{freq}} MHz</b></h4></li>
+			  			<li>{{mode}}</li>
+					</ul>
+					<li><h5>{{localDateAndTime timestamp}}</h5></li>
+					<li><b>Comments - </b> {{comments}}</li>
+					<li class="text-right"><small>Spotted by {{spotter}}</small></li>
+				</ul>
+			    <!-- <p><h4><b>{{freq}} MHz</b></h4> {{mode}}</p> -->
+			    <!-- <p>{{localDateAndTime timestamp}}</p> -->
+			    <p></p>
+			    
 			</div>
 		</div>   
 	  </div>
