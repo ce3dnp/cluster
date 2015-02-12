@@ -13,10 +13,15 @@ Template.mainLeftCol.events({
 
     var callsign = $(e.target).find('[id=dxCallSign]').val().toUpperCase();
     
-    var prefix = callsign.slice(0,1);
+    // var prefix = callsign.match(/^(.+?)\d/);
+    var prefix = callsign.match(/^\D*/gm).toString();
+    var prefix1 = callsign.match(/^\D*\d{0,2}/gm).toString();
+    var prefix2 = callsign.match(/^\D*\d*/gm).toString();
+    console.log(prefix + " : " + prefix1 + " : " + prefix2);
 
     // check the arrlPrefixes db to see if the prefix exists, if so add the metadata
     var dxccEntry = arrlPrefixes.findOne({pref: prefix});
+    console.log(dxccEntry);
     if (dxccEntry) {
         var entity = dxccEntry.entity.toUpperCase();    
         var continent = dxccEntry.continent.toUpperCase();
