@@ -12,6 +12,7 @@ Template.mainLeftCol.events({
     e.preventDefault()
 
     var callsign = $(e.target).find('[id=dxCallSign]').val().toUpperCase();
+    
     var prefix = callsign.slice(0,1);
 
     // check the arrlPrefixes db to see if the prefix exists, if so add the metadata
@@ -25,15 +26,10 @@ Template.mainLeftCol.events({
     }
 
     // insert the spot into the spots db
-    
     var spot = {
       dx:   callsign,
       freq: $(e.target).find('[id=freq]').val(),
       mode: $(e.target).find('[id=mode]').val(),
-      // timestamp: moment().format('DD-MM-YY HH:mm:ss ZZ'),
-      // timestamp: moment.utc().valueOf(),
-      timestamp: new Date(),
-      spotter: Meteor.users.findOne().username.toUpperCase(),
       comments: $(e.target).find('[id=comments]').val(),
       prefix: prefix,
       entity: entity,
@@ -43,8 +39,15 @@ Template.mainLeftCol.events({
       entityCode: entityCode
     };
 
-    console.log(spot);
-    spot._id = Spots.insert(spot);
+    Meteor.call('spotInsert', spot, function (error, result) {
+      if (error)
+        if (error.error == "500") {
+          return alert ("Sorry, you must be logged in to post!");
+        }
+        else {
+          return alert (error.reason); 
+        }       
+    });
     $('.dxSpotForm').trigger("reset");
     $('#dxCallSign').focus();
   }
