@@ -25,7 +25,13 @@
 			  	{{/if}}
 			  </div>
 			  <div class="col-md-2">
-			  	<img src="uk.png" class="img-flag pull-right"> 
+			  	<img src=
+			  		"{{#if continent}}
+			  			{{entity}}.png
+			  		 {{else}}
+			  		    m0atz.png
+			  		 {{/if}}"
+			  		class="img-flag pull-right"> 
 			  </div>
 	    </div> 
 	  </div>
